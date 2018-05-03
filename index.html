@@ -39,11 +39,14 @@ window.onload = function () {
 		var velocity = 127; // how hard the note hits
 		// play the note
 		MIDI.setVolume(0, 127);
-		for(var i = 0; i < 8; i++){
-			MIDI.noteOn(0, note+i, velocity, delay);
-			delay += 0.75;
-			MIDI.noteOff(0, note+i, delay);
-		}
+		setTimeout(function () {
+			for(var i = 0; i < 8; i++){
+				MIDI.noteOn(0, note+i, velocity, delay);
+				delay += 0.75;
+				MIDI.noteOff(0, note+i, delay);
+			}
+    }, 1000);
+
 	};
 };
 </script>
