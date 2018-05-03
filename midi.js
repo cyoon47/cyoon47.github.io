@@ -51,6 +51,8 @@ window.onload = function () {
 	});
 
 	document.getElementById("playBtn").onclick = function(){
+    console.log($('#bpm').val());
+    console.log(typeof($('#bpm').val()));
     playMIDI(notes, parseInt($('#bpm').text(), 10));
 	};
 }
@@ -68,7 +70,7 @@ var playNote = function(note, delay, length){
 var playMIDI = function(notes, bpm){
   var delay = MIDI.getContext().currentTime;
   var qLength = 60.0 / bpm;
-  console.log(qLength);
+  console.log("qLength: " + qLength);
   MIDI.setVolume(0, 127);
   notes.forEach(function(note){
     if(note.rest == 1){
