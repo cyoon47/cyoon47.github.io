@@ -53,7 +53,7 @@ window.onload = function () {
 	document.getElementById("playBtn").onclick = function(){
     console.log($('#bpm').val());
     console.log(typeof($('#bpm').val()));
-    playMIDI(notes, parseInt($('#bpm').text(), 10));
+    playMIDI(notes, parseInt($('#bpm').val(), 10));
 	};
 }
 
