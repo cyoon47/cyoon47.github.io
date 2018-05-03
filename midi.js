@@ -76,6 +76,7 @@ var playMIDI = function(notes, bpm){
     }
     else{
       playNote(MIDI.keyToNote[note.pitch], delay, qLength * note.type);
+      delay += qLength * note.type;
     }
   })
 }
