@@ -33,10 +33,9 @@ window.onload = function () {
 			// play the note
 			MIDI.setVolume(0, 127);
 			for(var i = 0; i < 8; i++){
-				MIDI.noteOn(0, note, velocity, delay);
+				MIDI.noteOn(0, note+i, velocity, delay);
 				delay += 0.75;
-				console.log(delay);
-				MIDI.noteOff(0, note, delay);
+				MIDI.noteOff(0, note+i, delay);
 
 			}
 
