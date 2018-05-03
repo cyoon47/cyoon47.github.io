@@ -22,5 +22,6 @@ window.onload = function () {
 			delay += 0.5;
 			MIDI.noteOff(0, note+i, delay);
 		}
+    console.log(MIDI.keyToNote["C3"]);
 	};
 }
