@@ -29,11 +29,11 @@ window.onload = function () {
 		},
 		onsuccess: function() {
 			window.alert("MIDI LOADED!");
-			document.getElementByID("playBtn").disabled = false;
+			document.getElementById("playBtn").disabled = false;
 		}
 	});
 
-	document.getElementByID("playBtn").onclick = function(){
+	document.getElementById("playBtn").onclick = function(){
 		var delay = 0; // play one note every quarter second
 		var note = 50; // the MIDI note
 		var velocity = 127; // how hard the note hits
