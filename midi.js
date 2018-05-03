@@ -70,7 +70,7 @@ var playMIDI = function(notes, bpm){
   var qLength = 60.0 / bpm;
   console.log(qLength);
   MIDI.setVolume(0, 127);
-  notes.foreach(function(note){
+  notes.forEach(function(note){
     if(note.rest == 1){
       delay += qLength * note.type;
     }
