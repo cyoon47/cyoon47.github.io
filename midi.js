@@ -51,7 +51,7 @@ window.onload = function () {
 	});
 
 	document.getElementById("playBtn").onclick = function(){
-    playMIDI(notes, 120);
+    playMIDI(notes, parseInt($('#bpm').text(), 10));
 	};
 }
 
