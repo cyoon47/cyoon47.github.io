@@ -25,8 +25,8 @@ window.onload = function () {
 		instrument: "acoustic_grand_piano",
 		onprogress: function(state, progress) {
 			console.log(state, progress);
-		},
-		onsuccess: function() {
+		}
+	}).then(function (){
 			var delay = 0; // play one note every quarter second
 			var note = 50; // the MIDI note
 			var velocity = 127; // how hard the note hits
@@ -36,10 +36,7 @@ window.onload = function () {
 				MIDI.noteOn(0, note+i, velocity, delay);
 				delay += 0.75;
 				MIDI.noteOff(0, note+i, delay);
-
 			}
-
-		}
 	});
 };
 </script>
