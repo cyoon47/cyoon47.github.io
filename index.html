@@ -18,6 +18,7 @@
 	<script src="./MIDI.js-master/js/util/dom_request_script.js" type="text/javascript"></script>
 </head>
 <body>
+	<input type="button" id="playBtn" value="Play notes" disabled>
 <script type="text/javascript">
 window.onload = function () {
 	MIDI.loadPlugin({
@@ -25,19 +26,25 @@ window.onload = function () {
 		instrument: "acoustic_grand_piano",
 		onprogress: function(state, progress) {
 			console.log(state, progress);
+		},
+		onsuccess: function() {
+			window.alert("MIDI LOADED!");
+			document.getElementByID("playBtn").disabled = false;
 		}
-	}).then(function (){
-			var delay = 0; // play one note every quarter second
-			var note = 50; // the MIDI note
-			var velocity = 127; // how hard the note hits
-			// play the note
-			MIDI.setVolume(0, 127);
-			for(var i = 0; i < 8; i++){
-				MIDI.noteOn(0, note+i, velocity, delay);
-				delay += 0.75;
-				MIDI.noteOff(0, note+i, delay);
-			}
 	});
+
+	document.getElementByID("playBtn").onclick = function(){
+		var delay = 0; // play one note every quarter second
+		var note = 50; // the MIDI note
+		var velocity = 127; // how hard the note hits
+		// play the note
+		MIDI.setVolume(0, 127);
+		for(var i = 0; i < 8; i++){
+			MIDI.noteOn(0, note+i, velocity, delay);
+			delay += 0.75;
+			MIDI.noteOff(0, note+i, delay);
+		}
+	};
 };
 </script>
 </body>
