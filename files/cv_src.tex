@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=1.6cm,right=1.6cm,top=1.5cm,bottom=1.8cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\definecolor{accent}{HTML}{0F6E56}
+\definecolor{ink}{HTML}{1C1B22}
+\definecolor{soft}{HTML}{55535F}
+
+\setmainfont{TeX Gyre Termes}
+\newfontfamily\sans{TeX Gyre Heros}
+
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true, urlcolor=accent}
+
+\titleformat{\section}{\sans\large\bfseries\color{accent}}{}{0em}{}[\vspace{-0.6em}{\color{accent!35}\rule{\linewidth}{0.8pt}}]
+\titlespacing{\section}{0pt}{1.1em}{0.6em}
+
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & {\color{soft}\sans\small #3}\\
+    {\color{soft}#2} & {\color{soft}\sans\small #4}\\
+  \end{tabularx}\vspace{0.2em}%
+}
+\newcommand{\me}{\textbf{Changyoon Lee}}
+
+\begin{document}
+
+{\sans\Huge\color{ink}Changyoon \textbf{Lee}}\\[0.3em]
+{\sans\color{soft}Ph.D. Candidate, School of Computing, KAIST}\\[0.5em]
+{\small\sans
+\href{mailto:changyoon.lee@kaist.ac.kr}{changyoon.lee@kaist.ac.kr} \quad\textbar\quad
+GitHub: \href{https://github.com/cyoon47}{cyoon47} \quad\textbar\quad
+LinkedIn: \href{https://www.linkedin.com/in/changyoon}{changyoon} \quad\textbar\quad
+\href{https://scholar.google.com/citations?user=iDriue4AAAAJ}{Google Scholar}
+}
+
+\section{Research Interest}
+My research aims to integrate natural language processing, AI and education to understand learners better. My work develops methods to capture learner understanding and context from learner--educator interactions, and devises personalized pedagogical approaches to bring the most educational benefit to learners through machine learning and LLM applications.
+
+\section{Education}
+\entry{Ph.D. Candidate, School of Computing}{KAIST, Daejeon, South Korea}{Sep 2021 -- Present}{Advisor: Alice Oh}
+\entry{M.S., School of Computing}{KAIST, Daejeon, South Korea}{Mar 2020 -- Aug 2021}{Advisor: Alice Oh}
+\vspace{-0.3em}{\small\color{soft}\hspace{0.2em}Thesis: Code-based question answering model and training dataset for programming education}\\[0.4em]
+\entry{B.S., School of Computing}{KAIST, Daejeon, South Korea}{Sep 2015 -- Aug 2019}{}
+
+\section{Publications}
+\begin{enumerate}[leftmargin=1.3em,itemsep=0.5em,label=\arabic*.]
+\item \href{https://egusphere.copernicus.org/preprints/2026/egusphere-2025-5305/egusphere-2025-5305.pdf}{\textbf{ML-IAM: Emulating Integrated Assessment Models With Machine Learning}}\\
+{\small Yen Shin, \me, Eunsu Kim, Junho Myung, Kiwoong Park, Jiheun Ha, Min-Young Choi, Bomi Kim, Hyun W. Ka, Jung-Hun Woo, Alice Oh, Haewon McJeon.}\\
+{\small\color{soft}\itshape Tackling Climate Change with ML Workshop, NeurIPS 2025.}
+\item \href{https://ceur-ws.org/Vol-3840/L3MNGET24_paper5.pdf}{\textbf{Learning from Teaching Assistants to Formulate Subgoals for Programming Tasks: Exploring the Potential for AI Teaching Assistants}}\\
+{\small \me, Junho Myung, Jieun Han, Jiho Jin, Alice Oh.}\\
+{\small\color{soft}\itshape LLM in Education Workshop (EDM 2024) \& HuCLLM Workshop (ACL 2024).}
+\item \href{https://aclanthology.org/2023.acl-long.822/}{\textbf{Rethinking Annotation: Can Language Learners Contribute?}}\\
+{\small Haneul Yoo, Rifki Afina Putri, \me, Youngin Lee, So-Yeon Ahn, Dongyeop Kang, Alice Oh.}\\
+{\small\color{soft}\itshape ACL 2023.}
+\item \href{https://aclanthology.org/2022.naacl-main.148/}{\textbf{CS1QA: A Dataset for Assisting Code-based Question Answering in an Introductory Programming Course}}\\
+{\small \me, Seonwoo Yeon, Alice Oh.}\\
+{\small\color{soft}\itshape NAACL 2022.}
+\item \href{https://dl.acm.org/doi/10.1145/3313831.3376390}{\textbf{Snapstream: Snapshot-based Interaction in Live Streaming for Visual Art}}\\
+{\small Saelyne Yang, \me, Hijung Valentina Shin, Juho Kim.}\\
+{\small\color{soft}\itshape CHI 2020.}
+\item \href{https://dl.acm.org/doi/10.1145/3330430.3333658}{\textbf{automaTA: Human-Machine Interaction for Answering Context-Specific Questions}}\\
+{\small \me*, Donghoon Han*, Hyoungwook Jin*, Alice Oh. \color{soft}(*Equal contribution)}\\
+{\small\color{soft}\itshape Learning at Scale (L@S) 2019.}
+\item \href{https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08008119}{\textbf{VocaBot: Language Learning App Powered by a Conversational Agent}}\\
+{\small \me, Kyung Je Jo, Juho Kim.}\\
+{\small\color{soft}\itshape HCI Korea 2019.}
+\end{enumerate}
+
+\section{Preprints}
+\begin{enumerate}[leftmargin=1.3em,itemsep=0.5em,label=\arabic*.]
+\item \href{https://arxiv.org/abs/2606.02404}{\textbf{K-BrowseComp: A Web Browsing Agent Benchmark Grounded in Korean Contexts}}\\
+{\small Nahyun Lee, Dongkeun Yoon, Guijin Son, Geewook Kim, Dayoon Ko, Jeonghun Park, Haneul Yoo, Jaewon Cho, Junghun Park, \me, Kyochul Jang, Jaeyeon Kim, Eunsu Kim, Woojin Cho, Seungone Kim.}\\
+{\small\color{soft}\itshape arXiv, 2026.}
+\end{enumerate}
+
+\section{Academic Services}
+\textbf{Organizer.}~{\small Pre-ACL International NLP Workshop at KAIST (2024).}\\[0.3em]
+\textbf{Reviewer.}~{\small NeurIPS Datasets and Benchmarks (2021), EMNLP (2021), Learning@Scale (2026).}\\[0.3em]
+\textbf{Volunteer.}~{\small COLING (2022), FAccT (2022), Festival of Learning (2026), ICML Workshop on Human-AI Co-Creativity (2026).}
+
+\section{Teaching}
+\entry{Head Teaching Assistant --- Introduction to Programming (CS101)}{KAIST}{Spring 2021 -- Present}{}
+\entry{Teaching Assistant --- Artificial Intelligence and Machine Learning (CS570)}{KAIST}{Spring 2020}{}
+\entry{Teaching Assistant --- Introduction to Programming (CS101)}{KAIST}{Fall 2018, Spring 2019, Fall 2020}{}
+
+\section{Mentoring}
+\entry{Research Mentor --- Yen Shin}{Co-authored a NeurIPS 2025 CCAI Workshop publication}{Fall 2024 -- Fall 2025}{}
+\entry{Research Mentor --- Hyungjo Bhang, Jeongin Bae}{}{Spring 2023}{}
+
+\section{Awards}
+\entry{Outstanding Teaching Assistant Award}{School of Computing, KAIST}{Fall 2025}{}
+\entry{Graduate Scholarship}{KAIST}{Spring 2020 -- Spring 2025}{}
+\entry{Undergraduate Full Tuition Scholarship}{KAIST}{Fall 2015 -- Spring 2019}{}
+\entry{Dean's List (Top 3\% in department)}{School of Computing, KAIST}{Spring 2018, Fall 2018}{}
+\entry{Department Valedictorian}{School of Computing, KAIST}{Spring 2018}{}
+\entry{LINE Scholarship}{LINE Corporation}{Fall 2017}{}
+
+\end{document}
