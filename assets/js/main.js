@@ -52,7 +52,7 @@
     function typeText(node, text, done) {
       node.classList.add("caret");
       var i = 0;
-      var speed = 16; // ms per char
+      var speed = 12; // ms per char
       (function tick() {
         node.textContent = text.slice(0, i);
         i++;
