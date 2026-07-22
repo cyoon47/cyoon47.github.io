@@ -12,12 +12,12 @@
 
 window.NEWS = [
   {
-    date: "2026",
+    date: "2026-6",
     tag: "Preprint",
     text: "New preprint out: <a href=\"https://arxiv.org/abs/2606.02404\" target=\"_blank\" rel=\"noopener\">K-BrowseComp</a>, a web-browsing agent benchmark grounded in Korean contexts."
   },
   {
-    date: "2026",
+    date: "2026-4",
     tag: "Service",
     text: "Serving as a reviewer for <em>Learning@Scale 2026</em>."
   },
