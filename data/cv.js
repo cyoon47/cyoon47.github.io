@@ -6,7 +6,7 @@
    ========================================================================= */
 
 window.CV = {
-  pdf: "files/cv.pdf",
+  pdf: "assets/CV.pdf",
   updated: "July 2026",
 
   interest:
